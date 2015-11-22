@@ -46,3 +46,4 @@ Temporary Items
 build-filmlister-Desktop_Qt_5_5_1_MinGW_32bit-Debug/Makefile
 *.exe
 filmlister/filmlister.pro.user
+*.autosave
