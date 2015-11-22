@@ -41,3 +41,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.o
+*.Debug
+build-filmlister-Desktop_Qt_5_5_1_MinGW_32bit-Debug/Makefile
+*.exe
+filmlister/filmlister.pro.user
