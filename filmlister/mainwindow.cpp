@@ -12,3 +12,18 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::addFilm(Film film)
+{
+    //TODO everything
+}
+
+void MainWindow::deleteFilm(Film film)
+{
+    //TODO everything
+}
+
+void MainWindow::editFilm(Film film)
+{
+    //TODO everything
+}

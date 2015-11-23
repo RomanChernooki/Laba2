@@ -2,6 +2,6 @@
 
 Film::Film()
 {
-
+    rating=0;
 }
 

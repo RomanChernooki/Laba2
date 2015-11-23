@@ -6,6 +6,7 @@ class DatabaseController
 {
 public:
     DatabaseController();
+
 };
 
 #endif // DATABASECONTROLLER_H

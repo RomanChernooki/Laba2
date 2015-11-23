@@ -17,12 +17,15 @@ SOURCES += main.cpp\
     interfacecontroller.cpp \
     film.cpp \
     apicontroller.cpp \
-    databasecontroller.cpp
+    databasecontroller.cpp \
+    adddialog.cpp
 
 HEADERS  += mainwindow.h \
     interfacecontroller.h \
     film.h \
     apicontroller.h \
-    databasecontroller.h
+    databasecontroller.h \
+    adddialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    adddialog.ui
