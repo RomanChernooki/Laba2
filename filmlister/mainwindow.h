@@ -19,6 +19,13 @@ public slots:
     void addFilm(Film film);
     void editFilm(Film film);
     void deleteFilm(Film film);
+signals:
+    void addButtonPressed();
+    void editButtonPressed(Film film);
+    void deleteButtonPressed(Film film);
+
+private slots:
+    void on_addButton_pressed();
 
 private:
     Ui::MainWindow *ui;

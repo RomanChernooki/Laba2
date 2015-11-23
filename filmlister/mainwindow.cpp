@@ -27,3 +27,8 @@ void MainWindow::editFilm(Film film)
 {
     //TODO everything
 }
+
+void MainWindow::on_addButton_pressed()
+{
+    emit addButtonPressed();
+}
