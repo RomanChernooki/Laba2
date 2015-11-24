@@ -8,8 +8,8 @@ InterfaceController::InterfaceController(QObject *parent) : QObject(parent)
 
 void InterfaceController::callAddFilmDialog()
 {
-     AddDialog *d= new AddDialog;
-     d->exec();
+     AddDialog d;
+     d.exec();
 }
 
 void InterfaceController::callDeleteFilmDialog(Film film)
