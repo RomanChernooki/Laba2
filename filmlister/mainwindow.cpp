@@ -21,7 +21,7 @@ void MainWindow::addFilm(Film film)
     qDebug()<<film.name;
     item->setText(1,film.date);
     item->setText(2,film.genre);
-    item->setText(3,film.description);
+    item->setText(3,film.rating);
     ui->treeWidget->addTopLevelItem(item);
 }
 

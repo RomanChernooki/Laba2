@@ -21,6 +21,7 @@ void InterfaceController::callAddFilmDialog()
          f.name=d.name;
          f.rating=d.rating;
          f.description=d.description;
+         database.addFilm(f);
          emit addFilm(f);
      }
 }

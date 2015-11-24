@@ -4,12 +4,14 @@
 #include "QObject"
 #include "adddialog.h"
 #include "mainwindow.h"
+#include "databasecontroller.h"
 
 class InterfaceController:public QObject
 {
 Q_OBJECT
 public:
    explicit InterfaceController(QObject *parent = 0);
+    DatabaseController database;
     MainWindow* window;
 private slots:
     void callAddFilmDialog();
