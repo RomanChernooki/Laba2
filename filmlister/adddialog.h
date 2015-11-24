@@ -20,6 +20,7 @@ public:
     QString actors;
     QString rating;
     QString genre;
+    QString description;
 
 private:
     Ui::AddDialog *ui;

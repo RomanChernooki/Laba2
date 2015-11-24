@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>621</width>
+    <width>543</width>
     <height>360</height>
    </rect>
   </property>
@@ -46,26 +46,12 @@
       <string>Оценка</string>
      </property>
     </column>
-    <item>
-     <property name="text">
-      <string>test</string>
-     </property>
-     <property name="text">
-      <string>test1</string>
-     </property>
-     <property name="text">
-      <string>test2</string>
-     </property>
-     <property name="text">
-      <string>test4</string>
-     </property>
-    </item>
    </widget>
    <widget class="QPushButton" name="infoButton">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>10</y>
+      <x>460</x>
+      <y>270</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -108,7 +94,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>621</width>
+     <width>543</width>
      <height>21</height>
     </rect>
    </property>

@@ -20,6 +20,7 @@ void InterfaceController::callAddFilmDialog()
          f.director=d.director;
          f.name=d.name;
          f.rating=d.rating;
+         f.description=d.description;
          emit addFilm(f);
      }
 }

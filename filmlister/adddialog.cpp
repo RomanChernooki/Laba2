@@ -21,4 +21,5 @@ void AddDialog::setFilmData()
     this->rating=ui->lineRating->text();
     this->date=ui->lineYear->text();
     this->name=ui->lineName->text();
+    this->description=ui->plainTextEdit->document()->toPlainText();
 }
