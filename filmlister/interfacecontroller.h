@@ -13,8 +13,12 @@ public:
     MainWindow* window;
 private slots:
     void callAddFilmDialog();
-    void callEditFilmDialog(Film film);
-    void callDeleteFilmDialog(Film film);
+    Film callEditFilmDialog(Film film);
+    Film callDeleteFilmDialog(Film film);
+signals:
+    void addFilm(Film);
+    void editFilm(Film);
+    void deleteFilm(Film);
 };
 
 #endif // INTERFACECONTROLLER_H

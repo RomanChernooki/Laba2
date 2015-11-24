@@ -46,7 +46,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLineEdit" name="linejanr"/>
+   <widget class="QLineEdit" name="lineJanr"/>
    <widget class="QLineEdit" name="lineRating"/>
   </widget>
   <widget class="QSplitter" name="splitter_2">

@@ -14,6 +14,7 @@ public:
     QString description;
     QString date;
     QString rating;
+    QString genre;
 };
 
 #endif // FILM_H
