@@ -8,6 +8,7 @@ class Film
 {
 public:
     Film();
+    int id;
     QString name;
     QString actors;
     QString director;

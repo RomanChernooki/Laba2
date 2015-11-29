@@ -13,6 +13,7 @@ public:
    explicit InterfaceController(QObject *parent = 0);
     DatabaseController database;
     MainWindow* window;
+    void initTable();
 private slots:
     void callAddFilmDialog();
     Film callEditFilmDialog(Film film);

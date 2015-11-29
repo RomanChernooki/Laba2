@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
     c.window=&w;
     QObject::connect(&w,SIGNAL(addButtonPressed()),&c,SLOT(callAddFilmDialog()));
     QObject::connect(&c,SIGNAL(addFilm(Film)),&w,SLOT(addFilm(Film)));
+    c.initTable();
     w.show();
 
     return a.exec();

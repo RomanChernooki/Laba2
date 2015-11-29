@@ -3,9 +3,23 @@
 
 InterfaceController::InterfaceController(QObject *parent) : QObject(parent)
 {
+    if(database.filmList.size()>0)
+        for(int i=0;i<database.filmList.size();i++)
+        {
+            emit addFilm(database.filmList[i]);
+        }
+
 
 }
 
+void InterfaceController::initTable()
+{
+    if(database.filmList.size()>0)
+        for(int i=0;i<database.filmList.size();i++)
+        {
+            emit addFilm(database.filmList[i]);
+        }
+}
 
 void InterfaceController::callAddFilmDialog()
 {
@@ -21,6 +35,7 @@ void InterfaceController::callAddFilmDialog()
          f.name=d.name;
          f.rating=d.rating;
          f.description=d.description;
+         f.id=database.filmList.size();
          database.addFilm(f);
          emit addFilm(f);
      }
