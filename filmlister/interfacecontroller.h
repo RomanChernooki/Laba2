@@ -5,6 +5,7 @@
 #include "adddialog.h"
 #include "mainwindow.h"
 #include "databasecontroller.h"
+#include "apicontroller.h"
 
 class InterfaceController:public QObject
 {
@@ -13,6 +14,7 @@ public:
    explicit InterfaceController(QObject *parent = 0);
     DatabaseController database;
     MainWindow* window;
+    APIController API;
     void initTable();
 private slots:
     void callAddFilmDialog();

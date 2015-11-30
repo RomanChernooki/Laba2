@@ -16,16 +16,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     interfacecontroller.cpp \
     film.cpp \
-    apicontroller.cpp \
     databasecontroller.cpp \
-    adddialog.cpp
+    adddialog.cpp \
+    apicontroller.cpp
 
 HEADERS  += mainwindow.h \
     interfacecontroller.h \
     film.h \
-    apicontroller.h \
     databasecontroller.h \
-    adddialog.h
+    adddialog.h \
+    apicontroller.h
 
 FORMS    += mainwindow.ui \
     adddialog.ui

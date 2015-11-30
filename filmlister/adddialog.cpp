@@ -23,3 +23,8 @@ void AddDialog::setFilmData()
     this->name=ui->lineName->text();
     this->description=ui->plainTextEdit->document()->toPlainText();
 }
+
+void AddDialog::on_autoFillButton_clicked()
+{
+    emit autoFill(ui->lineName->text());
+}

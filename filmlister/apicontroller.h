@@ -1,11 +1,22 @@
 #ifndef APICONTROLLER_H
 #define APICONTROLLER_H
 
+#include <QtCore>
+#include <QString>
+#include <QObject>
+#include <QXmlStreamReader>
 
-class APIController
+class APIController : public QObject
 {
+    Q_OBJECT
 public:
-    APIController();
+    explicit APIController(QObject *parent = 0);
+
+signals:
+
+public slots:
+
+    void getAnimeID(QString name);
 };
 
-#endif // APICONTROLLER_H
+#endif // API_H

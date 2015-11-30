@@ -7,34 +7,18 @@
     <x>0</x>
     <y>0</y>
     <width>560</width>
-    <height>272</height>
+    <height>279</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>240</y>
-     <width>521</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-   </property>
-  </widget>
   <widget class="QPlainTextEdit" name="plainTextEdit">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>130</y>
-     <width>531</width>
+     <width>541</width>
      <height>111</height>
     </rect>
    </property>
@@ -128,6 +112,32 @@
    <widget class="QLabel" name="label_6">
     <property name="text">
      <string>Оценка</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="splitter_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>250</y>
+     <width>541</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <widget class="QPushButton" name="autoFillButton">
+    <property name="text">
+     <string>Autofill</string>
+    </property>
+   </widget>
+   <widget class="QDialogButtonBox" name="buttonBox">
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="standardButtons">
+     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
     </property>
    </widget>
   </widget>

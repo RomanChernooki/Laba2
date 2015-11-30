@@ -8,8 +8,6 @@ InterfaceController::InterfaceController(QObject *parent) : QObject(parent)
         {
             emit addFilm(database.filmList[i]);
         }
-
-
 }
 
 void InterfaceController::initTable()
@@ -24,6 +22,7 @@ void InterfaceController::initTable()
 void InterfaceController::callAddFilmDialog()
 {
      AddDialog d;
+     connect(&d,SIGNAL(autoFill(QString)),&API,SLOT(getAnimeID(QString)));
      d.exec();
      Film f;
      if(1==d.result())

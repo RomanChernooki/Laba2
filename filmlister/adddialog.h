@@ -24,8 +24,11 @@ public:
 
 private:
     Ui::AddDialog *ui;
+signals:
+    autoFill(QString);
 private slots:
     void setFilmData();
+    void on_autoFillButton_clicked();
 };
 
 #endif // ADDDIALOG_H
