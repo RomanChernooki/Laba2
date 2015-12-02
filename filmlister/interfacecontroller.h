@@ -19,7 +19,7 @@ public:
     void initTable();
 private slots:
     void callAddFilmDialog();
-    Film callEditFilmDialog(QString name);
+    void callEditFilmDialog(QString name);
     Film callDeleteFilmDialog(QString name);
     void callInfoDialog(QString name);
 signals:

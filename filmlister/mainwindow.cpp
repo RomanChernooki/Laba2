@@ -32,7 +32,12 @@ void MainWindow::deleteFilm(Film film)
 
 void MainWindow::editFilm(Film film)
 {
-    //TODO everything
+    if(ui->treeWidget->selectedItems().size()!=1)
+        return;
+    ui->treeWidget->selectedItems()[0]->setText(0,film.name);
+    ui->treeWidget->selectedItems()[0]->setText(1,film.date);
+    ui->treeWidget->selectedItems()[0]->setText(2,film.genre);
+    ui->treeWidget->selectedItems()[0]->setText(3,film.rating);
 }
 
 void MainWindow::on_addButton_pressed()
@@ -45,4 +50,11 @@ void MainWindow::on_infoButton_clicked()
     if(ui->treeWidget->selectedItems().size()<1)
         return;
    emit getInfo(ui->treeWidget->selectedItems()[0]->text(0));
+}
+
+void MainWindow::on_editButton_clicked()
+{
+    if(ui->treeWidget->selectedItems().size()!=1)
+        return;
+    emit editButtonPressed(ui->treeWidget->selectedItems()[0]->text(0));
 }

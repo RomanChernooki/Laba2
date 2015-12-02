@@ -2,6 +2,7 @@
 #define ADDDIALOG_H
 
 #include <QDialog>
+#include "film.h"
 
 namespace Ui {
 class AddDialog;
@@ -13,6 +14,7 @@ class AddDialog : public QDialog
 
 public:
     explicit AddDialog(QWidget *parent = 0);
+    void initDialog(Film film);
     ~AddDialog();
     QString name;
     QString date;

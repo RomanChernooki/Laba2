@@ -13,6 +13,19 @@ AddDialog::~AddDialog()
 {
     delete ui;
 }
+
+void AddDialog::initDialog(Film film)
+{
+    ui->lineActors->setText(film.actors);
+    ui->lineDirector->setText(film.director);
+    ui->lineJanr->setText(film.genre);
+    ui->lineName->setText(film.name);
+    ui->plainTextEdit->setPlainText(film.description);
+    ui->lineRating->setText(film.rating);
+    ui->lineYear->setText(film.date);
+    setFilmData();
+}
+
 void AddDialog::setFilmData()
 {
     this->actors=ui->lineActors->text();

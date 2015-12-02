@@ -44,9 +44,25 @@ Film InterfaceController::callDeleteFilmDialog(QString name)
 {
 
 }
-Film InterfaceController::callEditFilmDialog(QString name)
+void InterfaceController::callEditFilmDialog(QString name)
 {
-
+    AddDialog d;
+    d.initDialog(database.getFilm(name));
+    d.exec();
+    Film f;
+    if(1==d.result())
+    {
+        f.actors=d.actors;
+        f.date=d.date;
+        f.genre=d.genre;
+        f.director=d.director;
+        f.name=d.name;
+        f.rating=d.rating;
+        f.description=d.description;
+        f.id=database.filmList.size();
+        database.editFilm(name,f);
+        emit editFilm(f);
+    }
 }
 void InterfaceController::callInfoDialog(QString name)
 {
