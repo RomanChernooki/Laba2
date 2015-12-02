@@ -20,7 +20,7 @@ public:
 private slots:
     void callAddFilmDialog();
     void callEditFilmDialog(QString name);
-    Film callDeleteFilmDialog(QString name);
+    void callDeleteFilmDialog(QString name);
     void callInfoDialog(QString name);
 signals:
     void addFilm(Film);

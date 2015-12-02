@@ -41,10 +41,17 @@ void InterfaceController::callAddFilmDialog()
      }
 }
 
-Film InterfaceController::callDeleteFilmDialog(QString name)
+void InterfaceController::callDeleteFilmDialog(QString name)
 {
-
+    database.deleteFilm(name);
+    if(database.filmList.size()>0)
+        for(int i=0;i<database.filmList.size();i++)
+        {
+            emit addFilm(database.filmList[i]);
+        }
 }
+
+
 void InterfaceController::callEditFilmDialog(QString name)
 {
     AddDialog d;

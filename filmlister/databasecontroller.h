@@ -16,6 +16,7 @@ public:
     void addFilm(Film film);
     void editFilm(QString oldName, Film newFilm);
     Film getFilm(QString name);
+    void deleteFilm(QString name);
     DatabaseController();
 private:
     QSqlDatabase db;

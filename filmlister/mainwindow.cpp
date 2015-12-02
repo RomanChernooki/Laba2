@@ -58,3 +58,19 @@ void MainWindow::on_editButton_clicked()
         return;
     emit editButtonPressed(ui->treeWidget->selectedItems()[0]->text(0));
 }
+
+void MainWindow::on_deleteButton_clicked()
+{
+    if(ui->treeWidget->selectedItems().size()!=1)
+        return;
+    QMessageBox::StandardButton reply;
+      reply = QMessageBox::question(this, "WARNING!111111111", "Really delete?",
+                                    QMessageBox::Yes|QMessageBox::No);
+      if (reply == QMessageBox::Yes) {
+          QString name= ui->treeWidget->selectedItems()[0]->text(0);
+           ui->treeWidget->clear();
+        emit deleteButtonPressed(name);
+
+
+      }
+}

@@ -81,3 +81,26 @@ Film DatabaseController::getFilm(QString name)
     f=filmList[i];
     return f;
 }
+
+void DatabaseController::deleteFilm(QString name)
+{
+    QSqlQuery query(db);
+    if(!query.exec("DELETE FROM film WHERE name = '"+name+"'"))
+        qDebug()<<query.lastError();
+    this->filmList.clear();
+    if(!query.exec("SELECT * FROM film"))
+         qDebug()<<query.lastError();
+ while (query.next()) {
+     Film f;
+        f.name = query.value(1).toString();
+        f.id = query.value(0).toInt();
+        f.director= query.value(2).toString();
+        f.actors=query.value(3).toString();
+        f.description=query.value(4).toString();
+        f.date=query.value(5).toString();
+        f.genre=query.value(6).toString();
+        f.rating=query.value(7).toString();
+        filmList.push_back(f);
+        qDebug() << f.name << f.id;
+    }
+}

@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
     QObject::connect(&c,SIGNAL(addFilm(Film)),&w,SLOT(addFilm(Film)));
     QObject::connect(&w,SIGNAL(editButtonPressed(QString)),&c,SLOT(callEditFilmDialog(QString)));
     QObject::connect(&c,SIGNAL(editFilm(Film)),&w,SLOT(editFilm(Film)));
+    QObject::connect(&w,SIGNAL(deleteButtonPressed(QString)),&c,SLOT(callDeleteFilmDialog(QString)));
     c.initTable();
     w.show();
 
