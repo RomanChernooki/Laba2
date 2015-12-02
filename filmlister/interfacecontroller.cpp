@@ -40,12 +40,18 @@ void InterfaceController::callAddFilmDialog()
      }
 }
 
-Film InterfaceController::callDeleteFilmDialog(Film film)
+Film InterfaceController::callDeleteFilmDialog(QString name)
 {
 
 }
-Film InterfaceController::callEditFilmDialog(Film film)
+Film InterfaceController::callEditFilmDialog(QString name)
 {
 
+}
+void InterfaceController::callInfoDialog(QString name)
+{
+    InfoWindow w;
+    w.initWindow(database.getFilm(name));
+    w.exec();
 }
 

@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
     MainWindow w;
     c.window=&w;
     QObject::connect(&w,SIGNAL(addButtonPressed()),&c,SLOT(callAddFilmDialog()));
+    QObject::connect(&w,SIGNAL(getInfo(QString)),&c,SLOT(callInfoDialog(QString)));
     QObject::connect(&c,SIGNAL(addFilm(Film)),&w,SLOT(addFilm(Film)));
     c.initTable();
     w.show();

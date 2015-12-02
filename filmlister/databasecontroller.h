@@ -14,6 +14,7 @@ class DatabaseController
 public:
     QList<Film> filmList;
     void addFilm(Film film);
+    Film getFilm(QString name);
     DatabaseController();
 private:
     QSqlDatabase db;

@@ -21,11 +21,14 @@ public slots:
     void deleteFilm(Film film);
 signals:
     void addButtonPressed();
+    void getInfo(QString name);
     void editButtonPressed(Film film);
     void deleteButtonPressed(Film film);
 
 private slots:
     void on_addButton_pressed();
+
+    void on_infoButton_clicked();
 
 private:
     Ui::MainWindow *ui;

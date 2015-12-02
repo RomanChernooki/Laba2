@@ -16,7 +16,6 @@ DatabaseController::DatabaseController()
                 "date TEXT,"
                 "genre TEXT,"
                 "rating TEXT)");
-     qDebug() << query.lastError();
         if(!query.exec("SELECT * FROM film"))
              qDebug()<<query.lastError();
      while (query.next()) {
@@ -43,4 +42,16 @@ void DatabaseController::addFilm(Film film)
                    "VALUES ("+QString::number(film.id)+", '"+film.name+"', '"+film.director+"', '"+film.actors+"', '"+film.description
                        +"', '"+film.date+"', '"+film.genre+"', '"+film.rating+"')"))
             qDebug()<<query.lastError();
+}
+
+Film DatabaseController::getFilm(QString name)
+{
+    int i=0;
+    Film f;
+    while(this->filmList[i].name!=name)
+    {
+        i++;
+    }
+    f=filmList[i];
+    return f;
 }

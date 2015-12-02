@@ -39,3 +39,10 @@ void MainWindow::on_addButton_pressed()
 {
     emit addButtonPressed();
 }
+
+void MainWindow::on_infoButton_clicked()
+{
+    if(ui->treeWidget->selectedItems().size()<1)
+        return;
+   emit getInfo(ui->treeWidget->selectedItems()[0]->text(0));
+}

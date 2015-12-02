@@ -18,7 +18,6 @@ void APIController::getAnimeID(QString name)
                           foreach(const QXmlStreamAttribute &attr, reader.attributes()) {
                               if (attr.name().toString() == QLatin1String("aid")) {
                                   aid = attr.value().toInt();
-                                  // do something
                               }
                           }
                       }

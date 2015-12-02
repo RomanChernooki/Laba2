@@ -6,6 +6,7 @@
 #include "mainwindow.h"
 #include "databasecontroller.h"
 #include "apicontroller.h"
+#include "infowindow.h"
 
 class InterfaceController:public QObject
 {
@@ -18,8 +19,9 @@ public:
     void initTable();
 private slots:
     void callAddFilmDialog();
-    Film callEditFilmDialog(Film film);
-    Film callDeleteFilmDialog(Film film);
+    Film callEditFilmDialog(QString name);
+    Film callDeleteFilmDialog(QString name);
+    void callInfoDialog(QString name);
 signals:
     void addFilm(Film);
     void editFilm(Film);
