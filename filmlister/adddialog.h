@@ -14,7 +14,6 @@ class AddDialog : public QDialog
 
 public:
     explicit AddDialog(QWidget *parent = 0);
-    void initDialog(Film film);
     ~AddDialog();
     QString name;
     QString date;
@@ -28,8 +27,9 @@ private:
     Ui::AddDialog *ui;
 signals:
     autoFill(QString);
-private slots:
+public slots:
     void setFilmData();
+    void initDialog(Film film);
     void on_autoFillButton_clicked();
 };
 

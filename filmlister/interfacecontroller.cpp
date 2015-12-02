@@ -23,6 +23,7 @@ void InterfaceController::callAddFilmDialog()
 {
      AddDialog d;
      connect(&d,SIGNAL(autoFill(QString)),&API,SLOT(getAnimeID(QString)));
+     connect(&API,SIGNAL(autofill(Film)),&d,SLOT(initDialog(Film)));
      d.exec();
      Film f;
      if(1==d.result())

@@ -16,13 +16,20 @@ AddDialog::~AddDialog()
 
 void AddDialog::initDialog(Film film)
 {
-    ui->lineActors->setText(film.actors);
-    ui->lineDirector->setText(film.director);
-    ui->lineJanr->setText(film.genre);
-    ui->lineName->setText(film.name);
-    ui->plainTextEdit->setPlainText(film.description);
-    ui->lineRating->setText(film.rating);
-    ui->lineYear->setText(film.date);
+    if(ui->lineActors->text()=="")
+        ui->lineActors->setText(film.actors);
+    if(ui->lineDirector->text()=="")
+        ui->lineDirector->setText(film.director);
+    if(ui->lineJanr->text()=="")
+        ui->lineJanr->setText(film.genre);
+    if(ui->lineName->text()=="")
+        ui->lineName->setText(film.name);
+    if(ui->plainTextEdit->toPlainText()=="")
+        ui->plainTextEdit->setPlainText(film.description);
+    if(ui->lineRating->text()=="")
+        ui->lineRating->setText(film.rating);
+    if(ui->lineYear->text()=="")
+        ui->lineYear->setText(film.date);
     setFilmData();
 }
 
