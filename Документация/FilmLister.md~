@@ -83,7 +83,7 @@
 		quid       	"5616130B012B"
 		documentation 	"Пользователь приложения"
 		stereotype 	"Actor")
-	    (object Class "imdb ANN"
+	    (object Class "imdb API"
 		quid       	"561615FF0099"
 		documentation 	"API сайта imdb"
 		stereotype 	"Actor")
@@ -222,7 +222,7 @@
 		roles      	(list role_list
 		    (object Role "$UNNAMED$7"
 			quid       	"5616160E010C"
-			supplier   	"Use Case View::imdb ANN"
+			supplier   	"Use Case View::imdb API"
 			quidu      	"561615FF0099"
 			is_navigable 	TRUE)
 		    (object Role "$UNNAMED$8"
@@ -239,7 +239,7 @@
 			is_navigable 	TRUE)
 		    (object Role "$UNNAMED$11"
 			quid       	"561617FE0300"
-			supplier   	"Use Case View::imdb ANN"
+			supplier   	"Use Case View::imdb API"
 			quidu      	"561615FF0099")))
 	    (object Association "{Если произошла ошибка}"
 		quid       	"561618700190"
@@ -339,7 +339,7 @@
 			max_width  	600
 			justify    	1
 			label      	"<<extend>>")
-		    (object ClassView "Class" "Use Case View::imdb ANN" @2
+		    (object ClassView "Class" "Use Case View::imdb API" @2
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -358,10 +358,10 @@
 			    Parent_View 	@2
 			    location   	(1874, 732)
 			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	362
+			    nlines     	2
+			    max_width  	325
 			    justify    	0
-			    label      	"imdb ANN")
+			    label      	"imdb API")
 			icon       	"Actor"
 			icon_style 	"Icon"
 			line_color 	3342489
@@ -433,32 +433,7 @@
 				    (1728, 571)
 				    (1642, 571))
 				line_style 	0)))
-		    (object UseCaseView "Use Case View::Просмотреть список" @7
-			location   	(961, 221)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    charSet    	204
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@7
-			    location   	(961, 359)
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	630
-			    justify    	0
-			    label      	"Просмотреть список")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"561613160393"
-			height     	118)
-		    (object ClassView "Class" "Use Case View::User" @8
+		    (object ClassView "Class" "Use Case View::User" @7
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -474,11 +449,11 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@8
+			    Parent_View 	@7
 			    location   	(516, 544)
 			    anchor_loc 	1
 			    nlines     	2
-			    max_width  	362
+			    max_width  	325
 			    justify    	0
 			    label      	"User")
 			icon       	"Actor"
@@ -487,6 +462,31 @@
 			quidu      	"5616130B012B"
 			annotation 	8
 			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Просмотреть список" @8
+			location   	(961, 221)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@8
+			    location   	(961, 359)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Просмотреть список")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"561613160393"
+			height     	118)
 		    (object AssociationViewNew "$UNNAMED$0" @9
 			location   	(668, 325)
 			font       	(object Font
@@ -510,10 +510,10 @@
 				line_color 	3342489
 				quidu      	"561613470087"
 				client     	@9
-				supplier   	@7
+				supplier   	@8
 				vertices   	(list Points
 				    (668, 325)
-				    (961, 221))
+				    (763, 291))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$2" @11
 				Parent_View 	@9
@@ -522,10 +522,10 @@
 				line_color 	3342489
 				quidu      	"561613470089"
 				client     	@9
-				supplier   	@8
+				supplier   	@7
 				vertices   	(list Points
 				    (668, 325)
-				    (573, 358))
+				    (573, 360))
 				line_style 	0)))
 		    (object ClassView "Class" "Use Case View::database" @12
 			ShowCompartmentStereotypes 	TRUE
@@ -547,7 +547,7 @@
 			    location   	(1481, 341)
 			    anchor_loc 	1
 			    nlines     	2
-			    max_width  	362
+			    max_width  	325
 			    justify    	0
 			    label      	"database")
 			icon       	"Actor"
@@ -591,10 +591,10 @@
 				line_color 	3342489
 				quidu      	"5628AE8503E0"
 				client     	@13
-				supplier   	@7
+				supplier   	@8
 				vertices   	(list Points
 				    (1245, 197)
-				    (1069, 209))
+				    (1069, 210))
 				line_style 	0)))
 		    (object UseCaseView "Use Case View::Редиктировать список" @16
 			location   	(967, 575)
@@ -657,7 +657,7 @@
 				supplier   	@16
 				vertices   	(list Points
 				    (715, 466)
-				    (857, 524))
+				    (857, 526))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$22" @20
 				Parent_View 	@18
@@ -666,7 +666,7 @@
 				line_color 	3342489
 				quidu      	"5616349E0152"
 				client     	@18
-				supplier   	@8
+				supplier   	@7
 				vertices   	(list Points
 				    (715, 466)
 				    (573, 407))
@@ -697,7 +697,7 @@
 				supplier   	@12
 				vertices   	(list Points
 				    (1230, 369)
-				    (1421, 221))
+				    (1422, 222))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$28" @23
 				Parent_View 	@21
@@ -709,7 +709,7 @@
 				supplier   	@16
 				vertices   	(list Points
 				    (1230, 369)
-				    (1035, 516))
+				    (1038, 517))
 				line_style 	0)))))))
     root_category 	(object Class_Category "Logical View"
 	quid       	"561612ED02E2"
@@ -1067,7 +1067,7 @@
 			is_navigable 	TRUE)
 		    (object Role "$UNNAMED$85"
 			quid       	"5628B73C03A2"
-			supplier   	"Use Case View::imdb ANN"
+			supplier   	"Use Case View::imdb API"
 			quidu      	"561615FF0099"
 			is_navigable 	TRUE)))
 	    (object Mechanism @24
@@ -1354,7 +1354,7 @@
 			multi      	FALSE)
 		    (object Object "$UNNAMED$93"
 			quid       	"562891950303"
-			class      	"Use Case View::imdb ANN"
+			class      	"Use Case View::imdb API"
 			quidu      	"561615FF0099"
 			persistence 	"Transient"
 			creationObj 	FALSE
@@ -2415,7 +2415,7 @@
 				supplier   	@56
 				vertices   	(list Points
 				    (783, 1764)
-				    (783, 1867))
+				    (783, 1865))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$79" @65
 				Parent_View 	@63
@@ -2427,7 +2427,7 @@
 				supplier   	@59
 				vertices   	(list Points
 				    (783, 1764)
-				    (782, 1664))
+				    (783, 1664))
 				line_style 	0)))
 		    (object ClassView "Class" "Logical View::InfoWindow" @66
 			ShowCompartmentStereotypes 	TRUE
@@ -2710,7 +2710,7 @@
 				    (1932, 586)
 				    (1848, 706))
 				line_style 	0)))
-		    (object ClassView "Class" "Use Case View::imdb ANN" @84
+		    (object ClassView "Class" "Use Case View::imdb API" @84
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -2732,7 +2732,7 @@
 			    nlines     	2
 			    max_width  	325
 			    justify    	0
-			    label      	"imdb ANN")
+			    label      	"imdb API")
 			icon       	"Actor"
 			icon_style 	"Icon"
 			line_color 	3342489
@@ -3102,7 +3102,7 @@
 			    location   	(2382, 315)
 			    anchor_loc 	1
 			    nlines     	2
-			    max_width  	360
+			    max_width  	206
 			    justify    	0
 			    label      	"")
 			icon       	"Actor"
@@ -3110,7 +3110,7 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"562F6F49007A"
-			width      	120
+			width      	218
 			height     	3757
 			icon_height 	162
 			icon_width 	120
@@ -3308,7 +3308,7 @@
 			    y_coord    	-89
 			    Nested     	TRUE))
 		    (object InterObjView "$UNNAMED$93" @136
-			location   	(4007, 225)
+			location   	(4007, 228)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -3321,10 +3321,10 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@136
-			    location   	(4007, 250)
+			    location   	(4007, 253)
 			    anchor_loc 	1
 			    nlines     	2
-			    max_width  	324
+			    max_width  	360
 			    justify    	0
 			    label      	"")
 			icon       	"Actor"
@@ -3333,7 +3333,7 @@
 			fill_color 	13434879
 			quidu      	"562891950303"
 			width      	120
-			height     	3822
+			height     	3819
 			icon_height 	162
 			icon_width 	120
 			icon_y_offset 	0

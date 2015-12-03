@@ -17,6 +17,5 @@ int main(int argc, char *argv[])
     QObject::connect(&w,SIGNAL(deleteButtonPressed(QString)),&c,SLOT(callDeleteFilmDialog(QString)));
     c.initTable();
     w.show();
-
     return a.exec();
 }
