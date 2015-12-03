@@ -13,134 +13,107 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPlainTextEdit" name="plainTextEdit">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>130</y>
-     <width>541</width>
-     <height>111</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QSplitter" name="splitter">
-   <property name="geometry">
-    <rect>
-     <x>370</x>
-     <y>40</y>
-     <width>181</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Vertical</enum>
-   </property>
-   <widget class="QLineEdit" name="lineActors">
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineJanr"/>
-   <widget class="QLineEdit" name="lineRating"/>
-  </widget>
-  <widget class="QSplitter" name="splitter_2">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>40</y>
-     <width>133</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Vertical</enum>
-   </property>
-   <widget class="QLineEdit" name="lineName"/>
-   <widget class="QLineEdit" name="lineYear"/>
-   <widget class="QLineEdit" name="lineDirector"/>
-  </widget>
-  <widget class="QSplitter" name="splitter_3">
-   <property name="geometry">
-    <rect>
-     <x>6</x>
-     <y>40</y>
-     <width>101</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Vertical</enum>
-   </property>
-   <widget class="QLabel" name="label">
-    <property name="text">
-     <string>Название</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="text">
-     <string>Год</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="text">
-     <string>Режиссёр</string>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QSplitter" name="splitter_4">
-   <property name="geometry">
-    <rect>
-     <x>266</x>
-     <y>40</y>
-     <width>101</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Vertical</enum>
-   </property>
-   <widget class="QLabel" name="label_4">
-    <property name="text">
-     <string>Актёры</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="text">
-     <string>Жанр</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="text">
-     <string>Оценка</string>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QSplitter" name="splitter_5">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>250</y>
-     <width>541</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <widget class="QPushButton" name="autoFillButton">
-    <property name="text">
-     <string>Autofill</string>
-    </property>
-   </widget>
-   <widget class="QDialogButtonBox" name="buttonBox">
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <property name="standardButtons">
-     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-    </property>
-   </widget>
-  </widget>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QSplitter" name="splitter_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Название</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Год</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Режиссёр</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSplitter" name="splitter_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QLineEdit" name="lineName"/>
+         <widget class="QLineEdit" name="lineYear"/>
+         <widget class="QLineEdit" name="lineDirector"/>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSplitter" name="splitter_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Актёры</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Жанр</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Оценка</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QLineEdit" name="lineActors">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineJanr"/>
+         <widget class="QLineEdit" name="lineRating"/>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="plainTextEdit"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QSplitter" name="splitter_5">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QPushButton" name="autoFillButton">
+      <property name="text">
+       <string>Autofill</string>
+      </property>
+     </widget>
+     <widget class="QDialogButtonBox" name="buttonBox">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="standardButtons">
+       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections>

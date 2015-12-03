@@ -74,7 +74,7 @@ void APIController::getAnimeID(QString name)
                reader.readNext();
                 aid = reader.text().toInt();
            }
-           if (reader.text() == name)
+           if (reader.text().toString().toUpper() == name.toUpper())
            {
                path="C:/"+QString::number(aid);
                file = new QFile(path);
